@@ -1,0 +1,7 @@
+configuration {
+	show-icons: true;
+	icon-theme: "papirus";
+	font: "JetBrainsMono Nerd Font Regular 12";
+}
+//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
