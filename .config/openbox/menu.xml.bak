@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://openbox.org/">
+  <menu id="root-menu" label="Applications">
+    <item label="File Manager" icon="/home/neo/.config/obmenu-generator/icons/a384074033dfc3ebebb1a8a39d2be8a6.png"><action name="Execute"><command><![CDATA[xdg-open .]]></command></action></item>
+    <item label="Terminal" icon="/home/neo/.config/obmenu-generator/icons/4bba506b8ff42c4bfb64152ae0997ac9.png"><action name="Execute"><command><![CDATA[xterm]]></command></action></item>
+    <item label="Web Browser" icon="/home/neo/.config/obmenu-generator/icons/0fd14be8770af75716427df2c3a3194a.png"><action name="Execute"><command><![CDATA[xdg-open http://]]></command></action></item>
+    <item label="Run command" icon="/home/neo/.config/obmenu-generator/icons/364434c8eec1f5977b3b8abf67711b4e.png"><action name="Execute"><command><![CDATA[gmrun]]></command></action></item>
+  <separator label="Categories"/>
+  <menu id="0.904259462216036" icon="/home/neo/.config/obmenu-generator/icons/14ccfd60064d61cfc7da4145731d45f2.png" label="Accessories">
+    <item label="ClamTk" icon="/home/neo/.config/obmenu-generator/icons/a378e889152a86818441e86a07e5eedb.png"><action name="Execute"><command><![CDATA[clamtk]]></command></action></item>
+    <item label="File Manager PCManFM" icon="/home/neo/.config/obmenu-generator/icons/a384074033dfc3ebebb1a8a39d2be8a6.png"><action name="Execute"><command><![CDATA[pcmanfm]]></command></action></item>
+    <item label="Neovim" icon="/home/neo/.config/obmenu-generator/icons/481634ade075122f7be11ba76d27bf4c.png"><action name="Execute"><command><![CDATA[xterm -e 'nvim']]></command></action></item>
+    <item label="Passwords and Keys" icon="/home/neo/.config/obmenu-generator/icons/f17a5ca8130cab9d8e64b00fcc60e7de.png"><action name="Execute"><command><![CDATA[seahorse]]></command></action></item>
+    <item label="picom"><action name="Execute"><command><![CDATA[picom]]></command></action></item>
+    <item label="ProtonUp-Qt" icon="/home/neo/.config/obmenu-generator/icons/645ee215d5cd831ba8fc815d9fc54318.png"><action name="Execute"><command><![CDATA[net.davidotek.pupgui2]]></command></action></item>
+    <item label="Qalculate!" icon="/home/neo/.config/obmenu-generator/icons/9c1bab72dc9a4fba59dfd4406f5e05f7.png"><action name="Execute"><command><![CDATA[qalculate-gtk]]></command></action></item>
+    <item label="Redshift" icon="/home/neo/.config/obmenu-generator/icons/56193e99067e84c685a43acfa920d73a.png"><action name="Execute"><command><![CDATA[redshift-gtk]]></command></action></item>
+    <item label="Software Token (small)" icon="/home/neo/.config/obmenu-generator/icons/e9851426713acbc595832d6334314cb7.png"><action name="Execute"><command><![CDATA[stoken-gui --small]]></command></action></item>
+    <item label="Software Token" icon="/home/neo/.config/obmenu-generator/icons/e9851426713acbc595832d6334314cb7.png"><action name="Execute"><command><![CDATA[stoken-gui]]></command></action></item>
+  </menu>
+  <menu id="0.815434951891319" icon="/home/neo/.config/obmenu-generator/icons/0387ca745482e01491536375926426b7.png" label="Development">
+    <item label="Android Studio" icon="/home/neo/.config/obmenu-generator/icons/7558d0b04db3eb80c82916fb586262ed.png"><action name="Execute"><command><![CDATA["/home/neo/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/211.7628.21.2111.8193401/bin/studio.sh"]]></command></action></item>
+    <item label="Icon Browser" icon="/home/neo/.config/obmenu-generator/icons/b8313cedd85df19356441f35523d5676.png"><action name="Execute"><command><![CDATA[yad-icon-browser]]></command></action></item>
+    <item label="JetBrains Toolbox" icon="/home/neo/.config/obmenu-generator/icons/596c04426b158a801b2ef70593431d9a.png"><action name="Execute"><command><![CDATA[/home/neo/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox]]></command></action></item>
+    <item label="Meld" icon="/home/neo/.config/obmenu-generator/icons/f80358a2bd296afbb29d592b44f2caa9.png"><action name="Execute"><command><![CDATA[meld]]></command></action></item>
+    <item label="WebStorm" icon="/home/neo/.config/obmenu-generator/icons/761f573e17730407ed6a72d250200adb.png"><action name="Execute"><command><![CDATA["/home/neo/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/213.6777.57/bin/webstorm.sh"]]></command></action></item>
+  </menu>
+  <menu id="0.50313395684692" icon="/home/neo/.config/obmenu-generator/icons/1c808b276109027e2dc0d44f11865068.png" label="Games">
+    <item label="Bridge Constructor Portal" icon="/home/neo/.config/obmenu-generator/icons/553d557534cbde77ff0e169d9e6ef9c8.png"><action name="Execute"><command><![CDATA[steam steam://rungameid/684410]]></command></action></item>
+    <item label="Disney's Princess Enchanted Journey" icon="/home/neo/.config/obmenu-generator/icons/81d2f937030c9bab7145e0cfb2ee1427.png"><action name="Execute"><command><![CDATA[steam steam://rungameid/322130]]></command></action></item>
+    <item label="ELDEN RING" icon="/home/neo/.config/obmenu-generator/icons/2e8c3684c994809b95bb3f14ca16d2eb.png"><action name="Execute"><command><![CDATA[steam-native steam://rungameid/1245620]]></command></action></item>
+    <item label="MultiMC 5" icon="/home/neo/.config/obmenu-generator/icons/9f91c06107003d96a351e7b54159b6bb.png"><action name="Execute"><command><![CDATA[/opt/multimc/run.sh]]></command></action></item>
+    <item label="Outer Wilds" icon="/home/neo/.config/obmenu-generator/icons/e4cf226cf47d86312a0d63975b04708c.png"><action name="Execute"><command><![CDATA[steam steam://rungameid/753640]]></command></action></item>
+    <item label="ProtonUp-Qt" icon="/home/neo/.config/obmenu-generator/icons/645ee215d5cd831ba8fc815d9fc54318.png"><action name="Execute"><command><![CDATA[net.davidotek.pupgui2]]></command></action></item>
+    <item label="Steam (Native)" icon="/home/neo/.config/obmenu-generator/icons/8b4902c5d24a30e0e78bb39cb1fb8024.png"><action name="Execute"><command><![CDATA[/usr/bin/steam-native]]></command></action></item>
+    <item label="Steam (Runtime)" icon="/home/neo/.config/obmenu-generator/icons/8b4902c5d24a30e0e78bb39cb1fb8024.png"><action name="Execute"><command><![CDATA[/usr/bin/steam-runtime]]></command></action></item>
+    <item label="The Binding of Isaac: Rebirth" icon="/home/neo/.config/obmenu-generator/icons/3444a36eb19e49c2bca73a2b9c282164.png"><action name="Execute"><command><![CDATA[steam steam://rungameid/250900]]></command></action></item>
+  </menu>
+  <menu id="0.275111368714484" icon="/home/neo/.config/obmenu-generator/icons/603671f8b1fb52aa225bd145c51f71b8.png" label="Graphics">
+    <item label="Dia Diagram Editor" icon="/home/neo/.config/obmenu-generator/icons/32e86ab2ee72be1669354fcb3bd79238.png"><action name="Execute"><command><![CDATA[dia --integrated]]></command></action></item>
+    <item label="GNU Image Manipulation Program" icon="/home/neo/.config/obmenu-generator/icons/031bb74f899b27dd0740011376599c7c.png"><action name="Execute"><command><![CDATA[gimp-2.10]]></command></action></item>
+  </menu>
+  <menu id="0.610066735779657" label="Multimedia">
+    <item label="OBS Studio" icon="/home/neo/.config/obmenu-generator/icons/b4563c3f2f355fd0e21e71a643647b8d.png"><action name="Execute"><command><![CDATA[obs]]></command></action></item>
+    <item label="PulseAudio Volume Control" icon="/home/neo/.config/obmenu-generator/icons/3f9109e4a34c88fc853a431b852c00c4.png"><action name="Execute"><command><![CDATA[pavucontrol]]></command></action></item>
+    <item label="Qt V4L2 test Utility" icon="/home/neo/.config/obmenu-generator/icons/c7862ca2d9fa1c149efd73cb87a38b54.png"><action name="Execute"><command><![CDATA[qv4l2]]></command></action></item>
+    <item label="Qt V4L2 video capture utility" icon="/home/neo/.config/obmenu-generator/icons/c7862ca2d9fa1c149efd73cb87a38b54.png"><action name="Execute"><command><![CDATA[qvidcap]]></command></action></item>
+    <item label="Spotify" icon="/home/neo/.config/obmenu-generator/icons/da53ef02c69b328c7a00a2590cdc6ccc.png"><action name="Execute"><command><![CDATA[spotify --uri=%U]]></command></action></item>
+    <item label="VLC media player" icon="/home/neo/.config/obmenu-generator/icons/e2980ee324069b6ce7f3bac9c5af0301.png"><action name="Execute"><command><![CDATA[/usr/bin/vlc --started-from-file]]></command></action></item>
+  </menu>
+  <menu id="0.641887949532233" icon="/home/neo/.config/obmenu-generator/icons/49a01db23d02418f601b76638c3ee54f.png" label="Network">
+    <item label="Avahi SSH Server Browser" icon="/home/neo/.config/obmenu-generator/icons/e26a88c88d4599feb8c1b176f4889327.png"><action name="Execute"><command><![CDATA[/usr/bin/bssh]]></command></action></item>
+    <item label="Avahi VNC Server Browser" icon="/home/neo/.config/obmenu-generator/icons/e26a88c88d4599feb8c1b176f4889327.png"><action name="Execute"><command><![CDATA[/usr/bin/bvnc]]></command></action></item>
+    <item label="Discord" icon="/home/neo/.config/obmenu-generator/icons/0ff8bb71b50039961543e5c6ea6e1668.png"><action name="Execute"><command><![CDATA[/usr/bin/discord]]></command></action></item>
+    <item label="Firefox" icon="/home/neo/.config/obmenu-generator/icons/1d8c66813d50ea60416d05c88622b1f0.png"><action name="Execute"><command><![CDATA[/usr/lib/firefox/firefox]]></command></action></item>
+    <item label="HakuNeko Desktop" icon="/home/neo/.config/obmenu-generator/icons/1e65e1f6d5e3992d3e8e39246b103c0e.png"><action name="Execute"><command><![CDATA[/usr/lib/hakuneko-desktop/hakuneko --no-sandbox]]></command></action></item>
+    <item label="Steam (Native)" icon="/home/neo/.config/obmenu-generator/icons/8b4902c5d24a30e0e78bb39cb1fb8024.png"><action name="Execute"><command><![CDATA[/usr/bin/steam-native]]></command></action></item>
+    <item label="Steam (Runtime)" icon="/home/neo/.config/obmenu-generator/icons/8b4902c5d24a30e0e78bb39cb1fb8024.png"><action name="Execute"><command><![CDATA[/usr/bin/steam-runtime]]></command></action></item>
+    <item label="Zoom" icon="/home/neo/.config/obmenu-generator/icons/d9527a99b47fa4e12c3405516443b7e5.png"><action name="Execute"><command><![CDATA[/usr/bin/zoom]]></command></action></item>
+  </menu>
+  <menu id="0.935398616033435" icon="/home/neo/.config/obmenu-generator/icons/cda5801c7bfe4cc51e6de4d93e8d6121.png" label="Settings">
+    <item label="ARandR" icon="/home/neo/.config/obmenu-generator/icons/ba8eca19c932d60efa3882319bb39ecc.png"><action name="Execute"><command><![CDATA[arandr]]></command></action></item>
+    <item label="Customize Look and Feel" icon="/home/neo/.config/obmenu-generator/icons/e78761fff5163d9375641f2e09fc0d77.png"><action name="Execute"><command><![CDATA[lxappearance]]></command></action></item>
+    <item label="Desktop Preferences" icon="/home/neo/.config/obmenu-generator/icons/2cb2ab6630804834f5c8865356895554.png"><action name="Execute"><command><![CDATA[pcmanfm --desktop-pref]]></command></action></item>
+    <item label="IBus Preferences" icon="/home/neo/.config/obmenu-generator/icons/f50e4cad4d725d506625a37e5aa2dadc.png"><action name="Execute"><command><![CDATA[ibus-setup]]></command></action></item>
+    <item label="Keyboard and Mouse" icon="/home/neo/.config/obmenu-generator/icons/f992a2c53431bd3313e5d464c34c53f9.png"><action name="Execute"><command><![CDATA[lxinput]]></command></action></item>
+    <item label="Openbox Configuration Manager" icon="/home/neo/.config/obmenu-generator/icons/61f3de6fd06f9847e869878302ba1980.png"><action name="Execute"><command><![CDATA[obconf]]></command></action></item>
+    <item label="Preferred Applications" icon="/home/neo/.config/obmenu-generator/icons/d9927f3f786f33888327f3ed8acbe27b.png"><action name="Execute"><command><![CDATA[libfm-pref-apps]]></command></action></item>
+    <item label="PulseAudio Volume Control" icon="/home/neo/.config/obmenu-generator/icons/3f9109e4a34c88fc853a431b852c00c4.png"><action name="Execute"><command><![CDATA[pavucontrol]]></command></action></item>
+    <item label="Tint2 Settings" icon="/home/neo/.config/obmenu-generator/icons/8400f04c7b86f1cfb5460d9aedf377c6.png"><action name="Execute"><command><![CDATA[tint2conf]]></command></action></item>
+    <item label="YAD settings" icon="/home/neo/.config/obmenu-generator/icons/b8313cedd85df19356441f35523d5676.png"><action name="Execute"><command><![CDATA[yad-settings]]></command></action></item>
+  </menu>
+  <menu id="0.377841809339849" icon="/home/neo/.config/obmenu-generator/icons/6bf868744178b61965e699cd6a89694f.png" label="System">
+    <item label="Avahi Zeroconf Browser" icon="/home/neo/.config/obmenu-generator/icons/e26a88c88d4599feb8c1b176f4889327.png"><action name="Execute"><command><![CDATA[/usr/bin/avahi-discover]]></command></action></item>
+    <item label="Configure EOS Update Notifier" icon="/home/neo/.config/obmenu-generator/icons/e7cf9605107eda4f267d83b1a467b8be.png"><action name="Execute"><command><![CDATA[eos-update-notifier-configure]]></command></action></item>
+    <item label="EndeavourOS apps info" icon="/home/neo/.config/obmenu-generator/icons/e7cf9605107eda4f267d83b1a467b8be.png"><action name="Execute"><command><![CDATA[eos-apps-info]]></command></action></item>
+    <item label="EndeavourOS log tool" icon="/home/neo/.config/obmenu-generator/icons/e7cf9605107eda4f267d83b1a467b8be.png"><action name="Execute"><command><![CDATA[/usr/bin/eos-log-tool]]></command></action></item>
+    <item label="File Manager PCManFM" icon="/home/neo/.config/obmenu-generator/icons/a384074033dfc3ebebb1a8a39d2be8a6.png"><action name="Execute"><command><![CDATA[pcmanfm]]></command></action></item>
+    <item label="Htop" icon="/home/neo/.config/obmenu-generator/icons/dfd897cf7539d79d86b3b2db1c9e118c.png"><action name="Execute"><command><![CDATA[xterm -e 'htop']]></command></action></item>
+    <item label="kitty" icon="/home/neo/.config/obmenu-generator/icons/9230f9c50903e85b9112e6cea2673815.png"><action name="Execute"><command><![CDATA[kitty]]></command></action></item>
+    <item label="OpenJDK Java 17 Console"><action name="Execute"><command><![CDATA[/usr/lib/jvm/java-17-openjdk/bin/jconsole]]></command></action></item>
+    <item label="OpenJDK Java 17 Shell"><action name="Execute"><command><![CDATA[xterm -e '/usr/lib/jvm/java-17-openjdk/bin/jshell']]></command></action></item>
+    <item label="Oracle VM VirtualBox" icon="/home/neo/.config/obmenu-generator/icons/ee6adc838532fb720682196c08d62f21.png"><action name="Execute"><command><![CDATA[VirtualBox]]></command></action></item>
+    <item label="Psensor" icon="/home/neo/.config/obmenu-generator/icons/c3a6e51a69e667e68701b9c65246e687.png"><action name="Execute"><command><![CDATA[psensor]]></command></action></item>
+    <item label="Reflector Simple" icon="/home/neo/.config/obmenu-generator/icons/e7cf9605107eda4f267d83b1a467b8be.png"><action name="Execute"><command><![CDATA[/usr/bin/reflector-simple]]></command></action></item>
+    <item label="Timeshift" icon="/home/neo/.config/obmenu-generator/icons/7589e5e757ce5621003e9849acc6e9ed.png"><action name="Execute"><command><![CDATA[timeshift-launcher]]></command></action></item>
+    <item label="Tint2" icon="/home/neo/.config/obmenu-generator/icons/f869afefec5429f7b15c8421d18c3701.png"><action name="Execute"><command><![CDATA[tint2]]></command></action></item>
+    <item label="UpdateInTerminal" icon="/home/neo/.config/obmenu-generator/icons/e7cf9605107eda4f267d83b1a467b8be.png"><action name="Execute"><command><![CDATA[UpdateInTerminal --nt]]></command></action></item>
+    <item label="UXTerm" icon="/home/neo/.config/obmenu-generator/icons/7c9f428f66b98fc4cd571182f645138b.png"><action name="Execute"><command><![CDATA[uxterm]]></command></action></item>
+    <item label="Welcome" icon="/home/neo/.config/obmenu-generator/icons/e7cf9605107eda4f267d83b1a467b8be.png"><action name="Execute"><command><![CDATA[sh /usr/share/endeavouros/scripts/welcome --once]]></command></action></item>
+    <item label="XTerm" icon="/home/neo/.config/obmenu-generator/icons/7c9f428f66b98fc4cd571182f645138b.png"><action name="Execute"><command><![CDATA[xterm]]></command></action></item>
+  </menu>
+  <separator/>
+  <menu id="0.329714807440187" icon="/home/neo/.config/obmenu-generator/icons/36b57deda34c347e69eaed83ac7c8754.png" label="Advanced Settings">
+    <item label="Conky RC" icon="/home/neo/.config/obmenu-generator/icons/28fb0a3e5d296b261caecbbe740ba1ff.png"><action name="Execute"><command><![CDATA[geany ~/.conkyrc]]></command></action></item>
+    <item label="Tint2 Panel" icon="/home/neo/.config/obmenu-generator/icons/28fb0a3e5d296b261caecbbe740ba1ff.png"><action name="Execute"><command><![CDATA[geany ~/.config/tint2/tint2rc]]></command></action></item>
+  <menu id="0.61646624497439" icon="/home/neo/.config/obmenu-generator/icons/8ff4b3d65cf1c3a91431edca5430a860.png" label="Obmenu-Generator">
+    <item label="Menu Schema" icon="/home/neo/.config/obmenu-generator/icons/28fb0a3e5d296b261caecbbe740ba1ff.png"><action name="Execute"><command><![CDATA[geany ~/.config/obmenu-generator/schema.pl]]></command></action></item>
+    <item label="Menu Config" icon="/home/neo/.config/obmenu-generator/icons/28fb0a3e5d296b261caecbbe740ba1ff.png"><action name="Execute"><command><![CDATA[geany ~/.config/obmenu-generator/config.pl]]></command></action></item>
+  <separator/>
+    <item label="Generate a static menu" icon="/home/neo/.config/obmenu-generator/icons/8ff4b3d65cf1c3a91431edca5430a860.png"><action name="Execute"><command><![CDATA[obmenu-generator -s -c]]></command></action></item>
+    <item label="Generate a static menu with icons" icon="/home/neo/.config/obmenu-generator/icons/8ff4b3d65cf1c3a91431edca5430a860.png"><action name="Execute"><command><![CDATA[obmenu-generator -s -i -c]]></command></action></item>
+  <separator/>
+    <item label="Generate a dynamic menu" icon="/home/neo/.config/obmenu-generator/icons/8ff4b3d65cf1c3a91431edca5430a860.png"><action name="Execute"><command><![CDATA[obmenu-generator -p]]></command></action></item>
+    <item label="Generate a dynamic menu with icons" icon="/home/neo/.config/obmenu-generator/icons/8ff4b3d65cf1c3a91431edca5430a860.png"><action name="Execute"><command><![CDATA[obmenu-generator -p -i]]></command></action></item>
+  <separator/>
+    <item label="Refresh cache" icon="/home/neo/.config/obmenu-generator/icons/5899c0001dc02972686e8446658fa7a9.png"><action name="Execute"><command><![CDATA[obmenu-generator -d]]></command></action></item>
+  </menu>
+  <menu id="0.103029619220063" icon="/home/neo/.config/obmenu-generator/icons/cbd33e85d4e0834359519a4e282b2aeb.png" label="Openbox">
+    <item label="Openbox Autostart" icon="/home/neo/.config/obmenu-generator/icons/28fb0a3e5d296b261caecbbe740ba1ff.png"><action name="Execute"><command><![CDATA[geany ~/.config/openbox/autostart]]></command></action></item>
+    <item label="Openbox RC" icon="/home/neo/.config/obmenu-generator/icons/28fb0a3e5d296b261caecbbe740ba1ff.png"><action name="Execute"><command><![CDATA[geany ~/.config/openbox/rc.xml]]></command></action></item>
+    <item label="Openbox Menu" icon="/home/neo/.config/obmenu-generator/icons/28fb0a3e5d296b261caecbbe740ba1ff.png"><action name="Execute"><command><![CDATA[geany ~/.config/openbox/menu.xml]]></command></action></item>
+    <item label="Reconfigure Openbox" icon="/home/neo/.config/obmenu-generator/icons/cbd33e85d4e0834359519a4e282b2aeb.png"><action name="Execute"><command><![CDATA[openbox --reconfigure]]></command></action></item>
+  </menu>
+  </menu>
+  <separator/>
+    <item label="Lock" icon="/home/neo/.config/obmenu-generator/icons/d9f5c4b52466297336f39b4fa4893b8a.png"><action name="Execute"><command><![CDATA[xscreensaver-command -lock]]></command></action></item>
+    <item label="Exit" icon="/home/neo/.config/obmenu-generator/icons/a7f1e9f21ab6b549236169821072bcd9.png"><action name="Exit"/></item>
+  </menu>
+</openbox_menu>
