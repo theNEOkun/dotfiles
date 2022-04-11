@@ -1,0 +1,3 @@
+#!/bin/bash 
+rofi -show filebrowser 2>&1 -icon-theme "Papirus" -show-icons | tee /tmp/rofi-file.log
+exit 0
