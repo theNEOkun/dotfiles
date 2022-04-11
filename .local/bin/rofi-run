@@ -1,0 +1,3 @@
+#!/bin/bash 
+rofi -sidebar-mode -modi drun,run -show drun -sort 2>&1 | tee /tmp/rofi-run.log
+exit 0

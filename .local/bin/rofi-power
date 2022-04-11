@@ -1,0 +1,3 @@
+#!/bin/bash 
+rofi -show power -modi power:rofi-power-menu 2>&1 | tee /tmp/rofi-run.log
+exit 0

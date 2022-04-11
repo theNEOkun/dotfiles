@@ -1,0 +1,48 @@
+#!/bin/bash
+
+google () {
+    case "$1" in
+        -p | --pictures)
+            echo "${@:2}" | xargs -I{} xdg-open "https://google.com/search?q={}&tbm=isch"
+            ;;
+        *)
+            echo "${@:1}" | xargs -I{} xdg-open "https://google.com/search?q={}"
+            ;;
+    esac
+}
+
+duckduckgo () {
+    case "$1" in
+        -p | --pictures)
+            echo "${@:2}" | xargs -I{} xdg-open "https://duckduckgo.com/?q={}&t=h_&iax=images&ia=images"
+            ;;
+        *)
+            echo "${@:1}" | xargs -I{} xdg-open "https://duckduckgo.com/?q={}&ia=web"
+            ;;
+    esac
+}
+
+    echo $*
+case "$1" in
+    -g | --google)
+        google ${@:2}
+        ;;
+    -gp)
+        google -p ${@:2}
+        ;;
+    -d | --duck)
+        duckduckgo ${@:2}
+        ;;
+    -dp)
+        duckduckgo -p ${@:2}
+        ;;
+    -h | --help)
+        echo "
+        -g or --google searches google
+        -d or --duck searches duckduckgo
+        adding -p or p after searches for pictures
+        "
+        ;;
+    *)
+        ;;
+esac

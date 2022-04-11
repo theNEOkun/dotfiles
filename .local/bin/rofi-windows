@@ -1,0 +1,3 @@
+#!/bin/bash
+rofi -show window 2>&1 -icon-theme "Papirus" -show-icons | tee /tmp/rofi-window.log
+exit 0
