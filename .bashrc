@@ -21,9 +21,7 @@ function changes_in_branch() {
 }
 
 parse_git_branch() {
-	if [[ -d .git ]]; then
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-	fi
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 disp_colors() {
