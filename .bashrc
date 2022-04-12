@@ -13,15 +13,17 @@ fi
 
 function changes_in_branch() { 
     if [ -d .git ]; then
-	if expr length + "$(git status -s)" 2>&1 > /dev/null; then     
-	    echo -ne "\033[0;33m$(__git_ps1)\033[0m"; 
-	else
-	    echo -ne "\033[0;32m$(__git_ps1)\033[0m"; fi; 
-    fi
+		git diff --shortstat
+	fi
+	if [ -d .myconf ]; then
+		config diff --shortstat
+	fi
 }
 
+source '/usr/share/git/completion/git-prompt.sh'
+
 parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	__git_ps1 "(%s)"
 }
 
 disp_colors() {
@@ -59,7 +61,7 @@ oldps1='[\u@\h \W]\$'
 
 ellaps1=$'$CYAN\u@\h$PURPLE\u2764$RESET'
 
-newps1=$'$(tput dim)${PURPLE}\u2554${GREEN}\u@\h${BLUE} \w${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)\n$(tput dim)${PURPLE}\u255A${BLUE}\$\u29D0 ${RESET}'
+newps1=$'$(tput dim)${PURPLE}\u2554${GREEN}\u@\h${BLUE} \w ${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)\n$(tput dim)${PURPLE}\u255A${BLUE}\$\u29D0 ${RESET}'
 
 PS1=$newps1
 
