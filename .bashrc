@@ -21,22 +21,47 @@ function changes_in_branch() {
 }
 
 parse_git_branch() {
+	if [[ -d .git ]]; then
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	fi
 }
 
-RESET=$'\e[0m'
-RED=$'\e[01;31m'
-GREEN=$'\e[01;32m'
-YELLOW=$'\e[01;33m'
-BLUE=$'\e[01;34m'
-PURPLE=$'\e[01;35m'
-CYAN=$'\e[01;36m'
-WHITE=$'\e[01;37m'
-BLACK=$'\e[01;30m'
+disp_colors() {
+    for fg_color in {0..7}; do
+        set_foreground=$(tput setaf $fg_color)
+        for bg_color in {0..7}; do
+            set_background=$(tput setab $bg_color)
+            echo -n $set_background$set_foreground
+            printf ' F:%s B:%s ' $fg_color $bg_color
+        done
+        echo $(tput sgr0)
+    done
+}
+
+RESET=$(tput sgr0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+PURPLE=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BLACK=$(tput setaf 8)
+
+RED_BG=$(tput setab 1)
+GREEN_BG=$(tput setab 2)
+YELLOW_BG=$(tput setab 3)
+BLUE_BG=$(tput setab 4)
+PURPLE_BG=$(tput setab 5)
+CYAN_BG=$(tput setab 6)
+WHITE_BG=$(tput setab 7)
+BLACK_BG=$(tput setab 8)
 
 oldps1='[\u@\h \W]\$' 
 
-newps1=$'${PURPLE}\u2554${GREEN}\u@\h${BLUE} \w${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)\n${PURPLE}\u255A${BLUE}\$\u29D0${RESET} '
+ellaps1=$'$CYAN\u@\h$PURPLE\u2764$RESET'
+
+newps1=$'$(tput dim)${PURPLE}\u2554${GREEN}\u@\h${BLUE} \w${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)\n$(tput dim)${PURPLE}\u255A${BLUE}\$\u29D0 ${RESET}'
 
 PS1=$newps1
 
