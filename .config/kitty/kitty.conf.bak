@@ -632,8 +632,8 @@
 #: Window layout {{{
 
 # remember_window_size  yes
-# initial_window_width  640
-# initial_window_height 400
+initial_window_width  640
+initial_window_height 400
 
 #: If enabled, the window size will be remembered so that new
 #: instances of kitty will have the same size as the previous
@@ -2059,6 +2059,6 @@ editor nvim
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Material Dark Hard
+# Dumbledore
 include current-theme.conf
 # END_KITTY_THEME
