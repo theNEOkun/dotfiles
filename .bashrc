@@ -7,6 +7,10 @@
 
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
 
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
 _set_liveuser_PS1() {
     PS1='[\u@\h \W]\$ '
     if [ "$(whoami)" = "liveuser" ] ; then
