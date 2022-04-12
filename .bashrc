@@ -11,19 +11,34 @@ if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
 
-_set_liveuser_PS1() {
-    PS1='[\u@\h \W]\$ '
-    if [ "$(whoami)" = "liveuser" ] ; then
-        local iso_version="$(grep ^VERSION= /usr/lib/endeavouros-release 2>/dev/null | cut -d '=' -f 2)"
-        if [ -n "$iso_version" ] ; then
-            local prefix="eos-"
-            local iso_info="$prefix$iso_version"
-            PS1="[\u@$iso_info \W]\$ "
-        fi
+function changes_in_branch() { 
+    if [ -d .git ]; then
+	if expr length + "$(git status -s)" 2>&1 > /dev/null; then     
+	    echo -ne "\033[0;33m$(__git_ps1)\033[0m"; 
+	else
+	    echo -ne "\033[0;32m$(__git_ps1)\033[0m"; fi; 
     fi
 }
-_set_liveuser_PS1
-unset -f _set_liveuser_PS1
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+RESET=$'\e[0m'
+RED=$'\e[01;31m'
+GREEN=$'\e[01;32m'
+YELLOW=$'\e[01;33m'
+BLUE=$'\e[01;34m'
+PURPLE=$'\e[01;35m'
+CYAN=$'\e[01;36m'
+WHITE=$'\e[01;37m'
+BLACK=$'\e[01;30m'
+
+oldps1='[\u@\h \W]\$' 
+
+newps1=$'${PURPLE}\u2554${GREEN}\u@\h${BLUE} \w${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)\n${PURPLE}\u255A${BLUE}\$\u29D0${RESET} '
+
+PS1=$newps1
 
 ShowInstallerIsoInfo() {
     local file=/usr/lib/endeavouros-release
@@ -94,8 +109,3 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 # END_KITTY_SHELL_INTEGRATION
 
 . "$HOME/.cargo/env"
-
-md() {
-    #pandoc --extract-media=. -t plain `find . -maxdepth 1 -iname "${1:-readme.md}"` | less
-    glow `find . -maxdepth 1 -iname "${1:-readme.md}"` -p
-}
