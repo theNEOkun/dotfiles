@@ -22,7 +22,6 @@ duckduckgo () {
     esac
 }
 
-    echo $*
 case "$1" in
     -g | --google)
         google ${@:2}
