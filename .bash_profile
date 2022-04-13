@@ -10,3 +10,14 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
+export TERMINAL=/usr/bin/kitty;
+
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+eval lesspipe.sh
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+
+export PATH="$HOME/.local/bin:$PATH"
+
