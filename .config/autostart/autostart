@@ -11,3 +11,4 @@ run "picom"
 #$HOME/.local/bin/tint2start.sh &
 run "$HOME/.fehbg"
 run "$HOME/.screenlayout/default.sh"
+run "redshift"

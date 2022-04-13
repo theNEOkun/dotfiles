@@ -12,7 +12,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 function changes_in_branch() { 
-    if [ -d .git ]; then
+    if [ -d .git ] || [ -f .git ]; then
 		git diff --shortstat
 	fi
 	if [ -d .myconf ]; then
