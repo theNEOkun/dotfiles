@@ -138,3 +138,8 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 . "$HOME/.cargo/env"
 
 shopt -s checkwinsize
+
+md() {
+    #pandoc --extract-media=. -t plain `find . -maxdepth 1 -iname "${1:-readme.md}"` | less
+    glow `find . -maxdepth 1 -iname "${1:-readme.md}"` -p
+}
