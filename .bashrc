@@ -63,7 +63,7 @@ ellaps1=$'$CYAN\u@\h$PURPLE\u2764$RESET'
 
 newps1=$'$(tput dim)${PURPLE}\u2554${GREEN}\u@\h${BLUE} \w ${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)\n$(tput dim)${PURPLE}\u255A${BLUE}\$\u29D0 ${RESET}'
 
-newerps1=$'${GREEN}\u@\h${BLUE} \w ${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)${BLUE}${RESET}\n\$ '
+newerps1=$'\n${GREEN}\u@\h${BLUE} \w ${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)${BLUE}${RESET}\n\$ '
 
 PS1=$newerps1
 
