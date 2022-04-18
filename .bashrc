@@ -20,6 +20,10 @@ function changes_in_branch() {
 	fi
 }
 
+#Exports
+
+export JDTLS_HOME="/usr/bin/jdtls"
+
 source '/usr/share/git/completion/git-prompt.sh'
 
 parse_git_branch() {
