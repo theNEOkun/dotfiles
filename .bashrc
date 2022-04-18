@@ -143,3 +143,5 @@ md() {
     #pandoc --extract-media=. -t plain `find . -maxdepth 1 -iname "${1:-readme.md}"` | less
     glow `find . -maxdepth 1 -iname "${1:-readme.md}"` -p
 }
+
+export ZK_NOTEBOOK_DIR="$HOME/Documents/ZK"
