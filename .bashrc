@@ -22,7 +22,7 @@ function changes_in_branch() {
 
 #Exports
 
-export JDTLS_HOME="/usr/bin/jdtls"
+export JDTLS_HOME="/usr/share/java/jdtls"
 
 source '/usr/share/git/completion/git-prompt.sh'
 
