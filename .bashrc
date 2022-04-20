@@ -11,6 +11,10 @@ if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_code.sh ]; then
+. ~/.bash_code.sh
+fi
+
 function changes_in_branch() { 
     if [ -d .git ] || [ -f .git ]; then
 		git diff --shortstat
@@ -23,6 +27,7 @@ function changes_in_branch() {
 #Exports
 
 export JDTLS_HOME="/usr/share/java/jdtls"
+export ZK_NOTEBOOK_DIR="$HOME/Documents/ZK"
 
 source '/usr/share/git/completion/git-prompt.sh'
 
@@ -142,10 +147,3 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 . "$HOME/.cargo/env"
 
 shopt -s checkwinsize
-
-md() {
-    #pandoc --extract-media=. -t plain `find . -maxdepth 1 -iname "${1:-readme.md}"` | less
-    glow `find . -maxdepth 1 -iname "${1:-readme.md}"` -p
-}
-
-export ZK_NOTEBOOK_DIR="$HOME/Documents/ZK"
