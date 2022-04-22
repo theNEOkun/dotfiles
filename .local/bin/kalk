@@ -1,0 +1,55 @@
+#!/bin/bash
+
+calculate=""
+
+output=false
+input=false
+
+cases() {
+	case "$1" in
+		"-o" | "--output")
+			if [[ $output == false ]]
+			then
+				calculate="${calculate}obase=$2; "
+				output=true
+			fi
+			check ${@:3}
+			;;
+		"-i" | "--input")
+			if [[ $input == false ]]
+			then
+				calculate="${calculate}ibase=$2; " 
+				input=true
+			fi
+			check ${@:3}
+			;;
+	esac
+}
+
+check() {
+	if [[ "$1" == "-h" ||  "$1" == "--help" ]]
+	then
+		echo "
+Helppage:
+
+	-i <num> or --input <num> to enter <num> as the input-base
+	-o <num> or --output <num> to enter <num> as the output-base
+
+One can only enter one -i or -o, everything else will be ignored.
+
+	-h or --help to see this text
+
+	Everything else is evaluated by bc. 
+		"
+		return
+	fi
+	if [[ "$1" == "-o" || "$1" == "--output" || "$1" == "-i" || "$1" == "--input" ]]
+	then
+		cases $@
+	else
+		echo "$calculate ${@^^}" | bc
+	fi
+}
+
+check "$@"
+
