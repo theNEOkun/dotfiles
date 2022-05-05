@@ -28,6 +28,7 @@ function changes_in_branch() {
 
 export JDTLS_HOME="/usr/share/java/jdtls"
 export ZK_NOTEBOOK_DIR="$HOME/Documents/ZK"
+export PARU_CONF="$HOME/.config/paru/paru.conf"
 
 source '/usr/share/git/completion/git-prompt.sh'
 
