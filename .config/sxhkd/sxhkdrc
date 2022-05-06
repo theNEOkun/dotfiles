@@ -1,15 +1,19 @@
+# Description; Take screenshot;
 Print
 	screenshot.sh
 
+# Description; Show main-menu;
 super + m
 	rofi-run
 
+# Description; Show power-menu;
 alt + m
 	rofi-power
 
-alt + Return
+# Description; Run kitty;
+super + Return
 	kitty
 
-# make sxhkd reload its configuration files:
+# Description; Restart sxhkd;
 super + Insert
   pkill -USR1 -x sxhkd; notify-send "Done"
