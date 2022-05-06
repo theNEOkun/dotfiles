@@ -1,0 +1,15 @@
+Print
+	screenshot.sh
+
+super + m
+	rofi-run
+
+alt + m
+	rofi-power
+
+alt + Return
+	kitty
+
+# make sxhkd reload its configuration files:
+super + Insert
+  pkill -USR1 -x sxhkd; notify-send "Done"
