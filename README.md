@@ -2,7 +2,7 @@
 
 Simple repo to contain some configurations and similar
 
-based on [this thread][https://news.ycombinator.com/item?id=11071754] with a writeup [here][https://www.atlassian.com/git/tutorials/dotfiles].
+based on [this thread]( https://news.ycombinator.com/item?id=11071754 ) with a writeup [here]( https://www.atlassian.com/git/tutorials/dotfiles ).
 
 ## Commands
 
