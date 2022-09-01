@@ -19,13 +19,13 @@ config config status.showUntrackedFiles no
 Start with
 
 ```bash
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 and
 
-echo ".cfg" >> .gitignore
+echo ".myconf" >> .gitignore
 ```
 
 ```git
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare <git-repo-url> $HOME/.myconf
 ```
