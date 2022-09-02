@@ -56,14 +56,38 @@ mvn_gen() {
 # Function to run a maven project
 mvn_run() {
 	file=$(fd pom.xml .);
-	groupId=$(strip ${file} "groupId");
-	artifactId=$(strip ${file} "artifactId");
-	version=$(strip ${file} "version");
-	java -cp target/${artifactId}-${version}.jar ${groupId}."$1"
+	parent=$(get_part "parent" $file )
+	pgroupId=$(get_value "groupId" ${parent});
+	if [[ $pgroupId != "" ]]; then
+		pgroupId="${pgroupId}."
+	fi
+	partifactId=$(get_value "artifactId" ${parent} )
+	echo $pgroupId '-' $partifactId
+	groupId=$(get_value_from_file "groupId" $file);
+	if [[ $groupId == "" ]]; then
+		groupId=$(get_value_from_file "artifactId" $file);
+	fi
+	groupId="${groupId}."
+	artifactId=$(get_value_from_file "artifactId" $file);
+	version=$(get_value_from_file "version" ${file});
+	java -cp target/${artifactId}-${version}.jar ${pgroupId}${groupId}"$1"
 }
 
-# Function to split the content from the given file and toke, used by mvn_run
-function strip() {
-	token="$2"
-	echo $(bat "$1" | egrep '<'${token}'>' | head -1 | sed 's-<'${token}'>--g' | sed 's-</'${token}'>--g')
+function get_value_from_file() {
+	local token="$1";
+	local file="$2";
+	echo $(bat $file | xml sel -t -v '_:project/_:'$token);
+}
+
+function get_value() {
+	token="$1"
+	shift
+	arr="$@"
+	echo $(echo $arr | xml sel -t -v '//_:'$token);
+}
+
+function get_part() {
+	token="$1"
+	file="$2"
+	echo $( xml sel -t -c '_:project/_:'$token $file ) 
 }
