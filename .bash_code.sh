@@ -56,27 +56,43 @@ mvn_gen() {
 # Function to run a maven project
 mvn_run() {
 	file=$(fd pom.xml .);
-	parent=$(get_part "parent" $file )
-	pgroupId=$(get_value "groupId" ${parent});
-	if [[ $pgroupId != "" ]]; then
-		pgroupId="${pgroupId}."
+	jar=false;
+	for each in get_value 'build/_:plugins/_:plugin/_:artifactId' $file; do
+		if [[ each == 'maven-jar-plugin' ]]; then
+			jar=true;
+		fi
+	done
+		parent=$(get_part "parent" $file )
+		pgroupId=$(get_value "groupId" ${parent});
+		if [[ $pgroupId != "" ]]; then
+			pgroupId="${pgroupId}."
+		fi
+		partifactId=$(get_value "artifactId" ${parent} )
+		echo $pgroupId '-' $partifactId
+		groupId=$(get_value_from_file "groupId" $file);
+		if [[ $groupId == "" ]]; then
+			groupId=$(get_value_from_file "artifactId" $file);
+		fi
+		groupId="${groupId}."
+		artifactId=$(get_value_from_file "artifactId" $file);
+		version=$(get_from_anywhere "version" ${file});
+	if [[ $jar = true ]]; then
+		java -jar target/${artifactId}-${version}.jar
+	else
+		java -cp target/${artifactId}-${version}.jar ${pgroupId}${groupId}"$1"
 	fi
-	partifactId=$(get_value "artifactId" ${parent} )
-	echo $pgroupId '-' $partifactId
-	groupId=$(get_value_from_file "groupId" $file);
-	if [[ $groupId == "" ]]; then
-		groupId=$(get_value_from_file "artifactId" $file);
-	fi
-	groupId="${groupId}."
-	artifactId=$(get_value_from_file "artifactId" $file);
-	version=$(get_value_from_file "version" ${file});
-	java -cp target/${artifactId}-${version}.jar ${pgroupId}${groupId}"$1"
 }
 
 function get_value_from_file() {
 	local token="$1";
 	local file="$2";
-	echo $(bat $file | xml sel -t -v '_:project/_:'$token);
+	echo $(xml sel -t -v '/_:project/_:'$token $file);
+}
+
+function get_from_anywhere() {
+	local token="$1";
+	local file="$2";
+	echo $(xml sel -t -v '//_:'$token $file);
 }
 
 function get_value() {
