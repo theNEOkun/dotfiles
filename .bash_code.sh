@@ -57,8 +57,8 @@ mvn_gen() {
 mvn_run() {
 	file=$(fd pom.xml .);
 	jar=false;
-	for each in get_value 'build/_:plugins/_:plugin/_:artifactId' $file; do
-		if [[ each == 'maven-jar-plugin' ]]; then
+	for each in $(get_value_from_file 'build/_:plugins/_:plugin/_:artifactId' $file); do
+		if [[ $each == 'maven-jar-plugin' ]]; then
 			jar=true;
 		fi
 	done
@@ -75,7 +75,10 @@ mvn_run() {
 		fi
 		groupId="${groupId}."
 		artifactId=$(get_value_from_file "artifactId" $file);
-		version=$(get_from_anywhere "version" ${file});
+		version=$(get_value_from_file "version" ${file});
+		if [[ $version == "" ]]; then
+			version=$(get_value "version" $parent);
+		fi
 	if [[ $jar = true ]]; then
 		java -jar target/${artifactId}-${version}.jar
 	else
