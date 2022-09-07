@@ -10,6 +10,9 @@ mkpdf() {
 }
 
 mkpdfcite() {
+	if [[ ! -f $1'.md' ]]; then
+		return 0;
+	fi
 	local csl=$(fd -d 1 --glob *.csl .);
 	if [[ -z $csl ]]; then
 		csl=${HOME}'/library/ieee.csl';
