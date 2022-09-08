@@ -10,6 +10,10 @@ mkpdf() {
 }
 
 mkpdfcite() {
+	toc='';
+	if [[ "$2" == "toc" ]]; then
+		toc="--toc";
+	fi
 	if [[ ! -f $1'.md' ]]; then
 		return 0;
 	fi
@@ -26,7 +30,7 @@ mkpdfcite() {
 	if [[ -f './template.tex' ]]; then
 		template=' --template=template.tex'
 	fi
-	pandoc -s -F pandoc-crossref -F pandoc-fignos --toc \
+	pandoc -s -F pandoc-crossref -F pandoc-fignos $toc \
 		$meta$template --bibliography='references.bib' $csl --citeproc \
 		-N $1.md -f markdown -t latex+raw_tex -o $1.tex
 	pdflatex -interaction=nonstopmode $1.tex &> /dev/null
