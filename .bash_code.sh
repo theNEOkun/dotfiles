@@ -6,7 +6,8 @@ md() {
 }
 
 mkpdf() {
-	pandoc --pdf-engine-opt=--enable-local-file-access $1.md -f markdown -t html5 -s -o $1.pdf
+	pandoc -s $1.md -f markdown -s -t latex+raw_tex -o $1.tex
+	pdflatex -interaction=nonstopmode $1.tex &> /dev/null
 }
 
 mkpdfcite() {
