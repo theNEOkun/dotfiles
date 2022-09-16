@@ -6,7 +6,12 @@ md() {
 }
 
 mkpdf() {
-	pandoc -s $1.md -f markdown -s -t latex+raw_tex -o $1.tex
+	local meta=$(fd -d 1 --glob *.yaml .);
+	local template=$(fd -d 1 --glob template.tex .);
+	if [[ -z $template ]]; then
+		template="--template="$template
+	fi
+	pandoc -s $1.md $meta $template -f markdown -s -t latex+raw_tex -o $1.tex
 	pdflatex -interaction=nonstopmode $1.tex &> /dev/null
 }
 
