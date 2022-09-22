@@ -7,17 +7,11 @@
 
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
 
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
-if [ -f ~/.bash_code.sh ]; then
-	. ~/.bash_code.sh
-fi
+[[ -f ~/.bash_code.sh ]] && . ~/.bash_code.sh
 
-if [[ -f ~/.bash_ps1.sh ]]; then
-	. ~/.bash_ps1.sh
-fi
+[[ -f ~/.bash_ps1.sh ]] && . ~/.bash_ps1.sh
 
 function changes_in_branch() { 
     if [ -d .git ] || [ -f .git ]; then
