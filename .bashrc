@@ -13,15 +13,6 @@
 
 [[ -f ~/.bash_ps1.sh ]] && . ~/.bash_ps1.sh
 
-function changes_in_branch() { 
-    if [ -d .git ] || [ -f .git ]; then
-		git diff --shortstat
-	fi
-	if [ -d .myconf ]; then
-		config diff --shortstat
-	fi
-}
-
 #Exports
 
 export JDTLS_HOME="/usr/share/java/jdtls"

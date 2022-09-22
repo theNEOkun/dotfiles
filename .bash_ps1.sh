@@ -1,8 +1,17 @@
-parse_git_branch() {
+function parse_git_branch() {
 	__git_ps1 "(%s)"
 }
 
-disp_colors() {
+function changes_in_branch() { 
+    if [[ -d .git ]] || [[ -f .git ]]; then
+		git diff --shortstat
+	fi
+	if [[ -d .myconf ]]; then
+		config diff --shortstat
+	fi
+}
+
+function disp_colors() {
     for fg_color in {0..7}; do
         set_foreground=$(tput setaf $fg_color)
         for bg_color in {0..7}; do
