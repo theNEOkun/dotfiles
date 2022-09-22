@@ -1,5 +1,28 @@
+RESET=$(tput sgr0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+PURPLE=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BLACK=$(tput setaf 8)
+
+RED_BG=$(tput setab 1)
+GREEN_BG=$(tput setab 2)
+YELLOW_BG=$(tput setab 3)
+BLUE_BG=$(tput setab 4)
+PURPLE_BG=$(tput setab 5)
+CYAN_BG=$(tput setab 6)
+WHITE_BG=$(tput setab 7)
+BLACK_BG=$(tput setab 8)
+
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+
 function parse_git_branch() {
-	__git_ps1 "(%s)"
+	__git_ps1 "%s"
 }
 
 function changes_in_branch() { 
@@ -22,26 +45,6 @@ function disp_colors() {
         echo $(tput sgr0)
     done
 }
-
-RESET=$(tput sgr0)
-RED=$(tput setaf 1)
-GREEN=$(tput setaf 2)
-YELLOW=$(tput setaf 3)
-BLUE=$(tput setaf 4)
-PURPLE=$(tput setaf 5)
-CYAN=$(tput setaf 6)
-WHITE=$(tput setaf 7)
-BLACK=$(tput setaf 8)
-
-RED_BG=$(tput setab 1)
-GREEN_BG=$(tput setab 2)
-YELLOW_BG=$(tput setab 3)
-BLUE_BG=$(tput setab 4)
-PURPLE_BG=$(tput setab 5)
-CYAN_BG=$(tput setab 6)
-WHITE_BG=$(tput setab 7)
-BLACK_BG=$(tput setab 8)
-
 oldps1='[\u@\h \W]\$' 
 
 ellaps1=$'$CYAN\u@\h$PURPLE\u2764$RESET'
