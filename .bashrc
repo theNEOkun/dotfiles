@@ -89,6 +89,11 @@ _open_files_for_editing() {
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
+export TERM=/usr/bin/kitty
+export TERMINAL=$TERM
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 . "$HOME/.cargo/env"
 
 shopt -s checkwinsize
