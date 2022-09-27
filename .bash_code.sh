@@ -46,6 +46,17 @@ mkpdfcite() {
 	rm $1.t* $1.aux $1.b* $1.log
 }
 
+function mkcsrc() {
+	local name="$1"
+	[[ -z $name ]] && return 0;
+	mkdir $name;
+	mkdir $name/src;
+	mkdir $name/bin;
+	mkdir $name/obj;
+	mkdir $name/tests;
+	bat ~/library/Makefile >> $name/Makefile
+}
+
 ext() {
 	if [[ -f "$1" ]] ; then
 		case "$1" in
