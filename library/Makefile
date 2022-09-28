@@ -26,7 +26,7 @@ release: $(BIN)
 
 #Makes the binary
 $(BIN): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@ -I $(SRCDIR)
+	$(CC) $(CFLAGS) $(OBJS) -o $@
 
 #Make .obj files from the .c files
 $(OBJDIR)/%.obj: $(SRCDIR)/%.c
@@ -43,14 +43,20 @@ test: $(BIN) $(TESTDIR)/bin $(TESTBINS)
 clean:
 	$(RM) -r $(BINDIR)/* $(OBJDIR)/*
 
-init:
-	mkdir ./$(SRCDIR) &>2 /dev/null
-	mkdir ./$(OBJDIR) &>2 /dev/null
-	mkdir ./$(TESTDIR) &>2 /dev/null
-	mkdir ./$(BINDIR) &>2 /dev/null
+init: $(OBJDIR) $(BINDIR) $(TESTDIR) $(SRCDIR)
+	@echo "DONE"
+
+$(SRCDIR):
+	@mkdir $@
+
+$(BINDIR):
+	@mkdir $@
 
 $(OBJDIR):
-	mkdir $@
+	@mkdir $@
+
+$(TESTDIR):
+	@mkdir $@
 
 $(TESTDIR)/bin:
-	mkdir $@
+	@mkdir $@
