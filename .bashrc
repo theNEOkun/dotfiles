@@ -91,6 +91,8 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 
 export EDITOR='nvim';
 export VISUAL='nvim'
+export MANPAGER='less'
+export MANPATH=':$HOME/.local/share/man'
 
 . "$HOME/.cargo/env"
 
