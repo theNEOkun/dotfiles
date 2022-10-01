@@ -82,6 +82,12 @@ comp() {
 	fi
 }
 
+function dwm_keys() {
+	cat $HOME/library/dwm_bindings | while read line; do
+		echo "$line"
+	done
+}
+
 alias yeet="paru -Rsc"
 
 keys() {
