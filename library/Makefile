@@ -58,8 +58,8 @@ test: $(BIN) $(TESTDIR)/bin $(TESTBINS)
 clean: 
 	$(RM) -r $(OBJDIR)/* $(ASMDIR)/* $(BINDIR)/*
 
-init: $(OBJDIR) $(BINDIR) $(TESTDIR) $(SRCDIR)
-	@mkdir $<
+init:
+	@mkdir $(OBJDIR) $(BINDIR) $(TESTDIR) $(SRCDIR)
 	echo "DONE"
 
 $(ASMDIR):
