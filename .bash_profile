@@ -10,7 +10,7 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
-export TERMINAL=/usr/bin/kitty;
+export TERMINAL=/usr/bin/alacritty;
 
 export EDITOR='nvim'
 export VISUAL='nvim'

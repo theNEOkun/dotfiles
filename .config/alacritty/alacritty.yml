@@ -1,3 +1,6 @@
+import:
+  - $HOME/library/alacritty-theme/themes/one_dark.yaml
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
