@@ -12,7 +12,7 @@ alt + m
 
 # Description; Run kitty;
 super + Return
-	kitty
+	alacritty
 
 # Description; Restart sxhkd;
 super + Insert
