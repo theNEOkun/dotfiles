@@ -437,10 +437,12 @@ font:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /bin/bash
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 
 # Startup directory
 #
@@ -751,13 +753,36 @@ font:
 # in the order they were defined in.
 key_bindings:
   - { key: W, mods: Control|Shift, action: Quit }
-  - { key: Return, mods: Control|Shift, action: CreateNewWindow }
+  # - { key: Return, mods: Control|Shift, action: CreateNewWindow }
   - { key: Key0,           mods: Control,                         action: None }
   - { key: Equals,         mods: Control,                         action: None }
   - { key: Plus,           mods: Control,                         action: None }
   - { key: NumpadAdd,      mods: Control,                         action: None }
   - { key: Minus,          mods: Control,                         action: None }
   - { key: NumpadSubtract, mods: Control,                         action: None }
+
+  #TMUX
+  - { key: D,     mods: Command,       chars: "\x06\x76" } 
+  - { key: D,     mods: Command|Shift, chars: "\x06\x73" }
+  - { key: W,     mods: Command,       chars: "\x06\x78" }
+  - { key: H,     mods: Command,       chars: "\x06\x68" }
+  - { key: J,     mods: Command,       chars: "\x06\x6a" }
+  - { key: K,     mods: Command,       chars: "\x06\x6b" }
+  - { key: L,     mods: Command,       chars: "\x06\x6c" }
+  - { key: T,     mods: Command,       chars: "\x06\x63" }
+  - { key: Key1,  mods: Command,       chars: "\x06\x31" }
+  - { key: Key2,  mods: Command,       chars: "\x06\x32" }
+  - { key: Key3,  mods: Command,       chars: "\x06\x33" }
+  - { key: Key4,  mods: Command,       chars: "\x06\x34" }
+  - { key: Key5,  mods: Command,       chars: "\x06\x35" }
+  - { key: Key6,  mods: Command,       chars: "\x06\x36" }
+  - { key: Key7,  mods: Command,       chars: "\x06\x37" }
+  - { key: Key8,  mods: Command,       chars: "\x06\x38" }
+  - { key: Key9,  mods: Command,       chars: "\x06\x39" }
+  - { key: Left,  mods: Command,       chars: "\x06\x48" }
+  - { key: Down,  mods: Command,       chars: "\x06\x4a" }
+  - { key: Up,    mods: Command,       chars: "\x06\x4b" }
+  - { key: Right, mods: Command,       chars: "\x06\x4c" }
 
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }

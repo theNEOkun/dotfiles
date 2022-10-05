@@ -96,4 +96,5 @@ export MANPATH=':$HOME/.local/share/man'
 
 . "$HOME/.cargo/env"
 
+eval lesspipe.sh > /dev/null
 shopt -s checkwinsize
