@@ -99,8 +99,12 @@ function chtsh() {
 	if [[ "$2" == "w" ]] || [[ "$2" == "window" ]]; then
 		option=neww
 	fi
-
-	tmux $option bash -c "curl cheat.sh/$1 & while [ true ] ; do sleep 1; done"
+	local search_option="$1"
+	if [[ "$1" == *":list"* ]]; then 
+		local lang=$(echo "$1" | sed 's#\/.*##g');
+		search_option=$lang'/'$(curl cheat.sh/$1 | fzf)
+	fi
+	tmux $option bash -c "curl cheat.sh/$search_option & while [ true ] ; do sleep 1; done"
 }
 
 source $HOME'/Programmering/bash/mvn_run/.bash_code.sh'
