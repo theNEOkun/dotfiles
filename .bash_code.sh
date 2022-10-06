@@ -95,7 +95,12 @@ keys() {
 }
 
 function chtsh() {
-	tmux neww bash -c "curl cheat.sh/$1 & while [ true ] ; do sleep 1; done"
+	local option="splitw"
+	if [[ "$2" == "w" ]] || [[ "$2" == "window" ]]; then
+		option=neww
+	fi
+
+	tmux $option bash -c "curl cheat.sh/$1 & while [ true ] ; do sleep 1; done"
 }
 
 source $HOME'/Programmering/bash/mvn_run/.bash_code.sh'
