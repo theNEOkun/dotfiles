@@ -95,16 +95,17 @@ keys() {
 }
 
 function chtsh() {
-	local option="splitw"
-	if [[ "$2" == "w" ]] || [[ "$2" == "window" ]]; then
+	local option=splitw
+	if [[ "$1" == "w" ]] || [[ "$1" == "window" ]]; then
 		option=neww
+		shift
 	fi
-	local search_option="$1"
-	if [[ "$1" == *":list"* ]]; then 
-		local lang=$(echo "$1" | sed 's#\/.*##g');
-		search_option=$lang'/'$(curl cheat.sh/$1 | fzf)
+	if [[ "$2" == *":list"* ]]; then
+		local lang="$1";
+		shift
+		search_option=$lang' '$(cht.sh "$lang $1" | fzf)
 	fi
-	tmux $option bash -c "curl cheat.sh/$search_option & while [ true ] ; do sleep 1; done"
+	tmux $option bash -c "cht.sh $search_option & while [ true ] ; do sleep 1; done"
 }
 
 source $HOME'/Programmering/bash/mvn_run/.bash_code.sh'
