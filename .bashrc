@@ -3,6 +3,10 @@
 #
 
 # If not running interactively, don't do anything
+
+alias ls='lsd'
+alias ll='lsd -l'
+alias la='lsd -la'
 [[ $- != *i* ]] && return
 
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
