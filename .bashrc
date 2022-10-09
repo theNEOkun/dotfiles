@@ -7,6 +7,8 @@
 alias ls='lsd'
 alias ll='lsd -l'
 alias la='lsd -la'
+alias l='lsd -l'
+
 [[ $- != *i* ]] && return
 
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
