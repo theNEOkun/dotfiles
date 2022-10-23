@@ -9,6 +9,8 @@ alias ll='lsd -l'
 alias la='lsd -la'
 alias l='lsd -l'
 
+set -o vi
+
 [[ $- != *i* ]] && return
 
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
