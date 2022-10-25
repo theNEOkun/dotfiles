@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function mvn_gen() {
 	local group="";
 	local artifact="";

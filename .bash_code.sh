@@ -108,4 +108,4 @@ function chtsh() {
 	tmux $option bash -c "cht.sh $search_option & while [ true ] ; do sleep 1; done"
 }
 
-source $HOME'/Programmering/bash/mvn_run/.bash_code.sh'
+source $HOME'/.local/bin/mvn_run.sh'
