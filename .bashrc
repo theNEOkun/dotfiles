@@ -105,4 +105,3 @@ export MANPATH=':$HOME/.local/share/man'
 
 eval lesspipe.sh > /dev/null
 shopt -s checkwinsize
-. ~/.bash.d/cht.sh
