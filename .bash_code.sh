@@ -100,6 +100,7 @@ function chtsh() {
 		option=neww
 		shift
 	fi
+	local search_option="$@"
 	if [[ "$2" == *":list"* ]]; then
 		local lang="$1";
 		shift
