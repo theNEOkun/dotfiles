@@ -50,7 +50,7 @@ function mkcsrc() {
 	local name="$1"
 	[[ -z $name ]] && return 0;
 	mkdir $name;
-	bat ~/library/Makefile >> $name/Makefile
+	bat ~/library/skeleton/Makefile >> $name/Makefile
 	cd $name;
 	make init;
 }
