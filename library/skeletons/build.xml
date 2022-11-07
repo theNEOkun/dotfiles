@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="Unknwown start" default="test">
+  <property name="main" location="${basedir}" />
+  <property name="main.src" location="${main}/src" />
+  <property name="main.bin" location="${main}/bin" />
+  <property name="dist" location="${basedir}/dist" />
+  <property name="lib" location="${basedir}/lib" />
+
+  <path id="main.compile.classpath">
+    <pathelement location="${main.bin}" />
+    <pathelement location="${interfaces}" />
+    <pathelement location="${tests}" />
+  </path>
+
+  <path id = "classpath.test">
+    <pathelement location = "lib/junit-4.13.2.jar" />
+    <pathelement location = "lib/hamcrest-core-1.3.jar" />
+    <pathelement location = "${tests}" />
+    <pathelement location = "${main.src}" />
+    <path refid = "main.compile.classpath" />
+  </path>
+
+  <target name="clean" description="Remove output directories">
+    <delete dir="${main.bin}" />
+    <delete dir="${dist}" />
+  </target>
+
+  <target name="init" description="Create output directories">
+    <mkdir dir="${main.bin}" />
+    <mkdir dir="${dist}" />
+  </target>
+
+  <target name="compile" depends="init" description="Compile main project">
+    <javac
+        srcdir="${main.src}"
+        destdir="${main.bin}">
+      <classpath refid="main.compile.classpath" />
+    </javac>
+  </target>
+
+  <target name="test" depends="compile" description="Run test">
+    <junit printsummary="no" haltonerror="yes" haltonfailure="yes" fork="no">
+      <formatter type="brief" usefile="false" />
+      <classpath refid = "classpath.test" />
+      <test name="se.miun.dt015a.guesser.Test" />
+    </junit>
+  </target>
+
+  <!-- Package project into zip for distribution to the students. -->
+  <target name="build" depends="clean,init" description="ZIP project">
+    <zip destfile="${zipfile}"
+      basedir="${basedir}"
+      excludes="**/dist/*, **/lib/guesser_interfaces.jar">
+      <zipfileset includes="**/*.java" src="${interfaces}" prefix="src"/>
+    </zip>
+  </target>
+
+</project>
