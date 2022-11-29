@@ -4,15 +4,6 @@
 
 # If not running interactively, don't do anything
 
-alias ls='ls --color=auto'
-alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-
-alias ls='lsd'
-alias ll='lsd -l'
-alias la='lsd -la'
-alias l='lsd -l'
-
 set -o vi
 
 [[ $- != *i* ]] && return
@@ -106,3 +97,7 @@ export MANPATH=':$HOME/.local/share/man'
 
 eval lesspipe.sh > /dev/null
 shopt -s checkwinsize
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)

@@ -7,3 +7,13 @@ alias drg=dragon-drop
 
 alias disas="objdump -drwCS -Mintel"
 
+alias ls='ls --color=auto'
+alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
+alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+
+alias ls='lsd'
+alias ll='lsd -l'
+alias la='lsd -la'
+alias l='lsd -l'
+
+alias vim='nvim'
