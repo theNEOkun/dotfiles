@@ -17,3 +17,4 @@ alias la='lsd -la'
 alias l='lsd -l'
 
 alias vim='nvim'
+alias hx='helix'
