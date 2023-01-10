@@ -18,3 +18,6 @@ alias l='lsd -l'
 
 alias vim='nvim'
 alias hx='helix'
+
+alias gdbt='gdb --tui'
+alias rgdbt='rust-gdb --tui'
