@@ -17,10 +17,8 @@ export VISUAL='nvim'
 
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
-
-export PATH="$HOME/.local/bin:$PATH"
-
-
+GHC="$HOME/.ghcup/bin";
+export PATH="$GHC:$HOME/.local/bin:$PATH"
 
 # Added by Toolbox App
 export PATH="$PATH:/home/neo/.local/share/JetBrains/Toolbox/scripts"
