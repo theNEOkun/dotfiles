@@ -15,10 +15,11 @@ export TERMINAL=/usr/bin/alacritty;
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
-GHC="$HOME/.ghcup/bin";
-export PATH="$GHC:$HOME/.local/bin:$PATH"
+
+export STACK_XDG="YES";
+export GHCUP_USE_XDG_DIRS="YES";
+export PATH="$HOME/.config/ghcup/bin:$PATH";
 
 # Added by Toolbox App
 export PATH="$PATH:/home/neo/.local/share/JetBrains/Toolbox/scripts"
