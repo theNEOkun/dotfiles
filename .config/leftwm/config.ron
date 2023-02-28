@@ -57,7 +57,7 @@
       (  window_title: "Zoom *", spawn_floating: false ),
       (  window_title: "zoom", spawn_floating: false )
     ],
-    disable_current_tag_swap: false,
+    disable_current_tag_swap: true,
     disable_tile_drag: false,
     focus_behaviour: Sloppy,
     focus_new_windows: true,
