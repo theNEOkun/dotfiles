@@ -58,7 +58,8 @@
       ( window_title: "FML early loading progress", spawn_floating: true ),
       ( window_title: "Zoom .*", spawn_floating: false ),
       ( window_title: "zoom", spawn_floating: false ),
-      ( window_title: ".*private key.*", spawn_floating: false )
+      ( window_title: ".*private key.*", spawn_floating: false ),
+      ( window_class: "seahorse", spawn_floating: true )
     ],
     disable_current_tag_swap: true,
     disable_tile_drag: false,
