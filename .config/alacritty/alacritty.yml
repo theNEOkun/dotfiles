@@ -385,10 +385,10 @@ cursor:
 #   - (Windows) powershell
 shell:
   program: /bin/bash
-  args:
-    - -l
-    - -c
-    - "tmux"
+  # args:
+  #   - -l
+  #   - -c
+  #   - "tmux"
   # Startup directory
   #
   # Directory the shell is started in. If this is unset, or `None`, the working
