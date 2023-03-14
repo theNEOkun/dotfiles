@@ -39,7 +39,7 @@
         RightWiderLeftStack,
         LeftWiderRightStack,
     ],
-    layout_mode: Tag,
+    layout_mode: Workspace,
     insert_behavior: Bottom,
     scratchpad: [
         ( name: "Alacritty", // This is the name which is referenced when calling (case-sensitive)
