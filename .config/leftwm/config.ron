@@ -77,7 +77,7 @@
     keybind: [
         ( command: Execute, value: "rofi-run", modifier: ["modkey"], key: "m" ),
         ( command: Execute, value: "rofi-power", modifier: ["Alt"], key: "m" ),
-        ( command: Execute, value: "alacritty", modifier: ["modkey"], key: "Return" ),
+        ( command: Execute, value: "alacritty -e tmux", modifier: ["modkey"], key: "Return" ),
         ( command: Execute, value: "screenshot.sh", modifier: [], key: "Print" ),
         ( command: CloseWindow, modifier: ["modkey", "Shift"], key: "c" ),
         ( command: SoftReload, modifier: ["modkey", "Shift"], key: "r" ),
