@@ -8,13 +8,16 @@ set -o vi
 
 [[ $- != *i* ]] && return
 
-[[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
+[[ -f ~/.welcome_screen ]] && source ~/.welcome_screen
 
-[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
 
-[[ -f ~/.bash_code.sh ]] && . ~/.bash_code.sh
+[[ -f ~/.bash_code.sh ]] && source ~/.bash_code.sh
 
-[[ -f ~/.bash_ps1.sh ]] && . ~/.bash_ps1.sh
+[[ -f ~/.bash_ps1.sh ]] && source ~/.bash_ps1.sh
+
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
 
 #Exports
 
