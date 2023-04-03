@@ -17,12 +17,14 @@ CYAN_BG=$(tput setab 6)
 WHITE_BG=$(tput setab 7)
 BLACK_BG=$(tput setab 8)
 
-export GIT_PS1_SHOWCOLORHINTS=1
-export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=false
 export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWCOLORHINTS=true
 
 function parse_git_branch() {
-	__git_ps1 "%s"
+	__git_ps1 "git:[%s]"
 }
 
 function changes_in_branch() { 
@@ -51,7 +53,7 @@ ellaps1=$'$CYAN\u@\h$PURPLE\u2764$RESET'
 
 newps1=$'$(tput dim)${PURPLE}\u2554${GREEN}\u@\h${BLUE} \w ${YELLOW}$(parse_git_branch)${RED}$(changes_in_branch)\n$(tput dim)${PURPLE}\u255A${BLUE}\$\u29D0 ${RESET}'
 
-newerps1=$'\n${GREEN}\u@\h${BLUE} \w ${YELLOW}$(parse_git_branch)${RESET}$(changes_in_branch)${BLUE}${RESET}\n\$ '
+ps1_2=$'\n${GREEN}\u@\h${BLUE} \w ${YELLOW}$(parse_git_branch)${RESET}$(changes_in_branch)${BLUE}${RESET}\n\$ '
 
-PS1=$newerps1
+PS1=$ps1_2
 

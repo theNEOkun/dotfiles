@@ -16,6 +16,8 @@ set -o vi
 
 [[ -f ~/.bash_ps1.sh ]] && source ~/.bash_ps1.sh
 
+[[ -f ~/.bash_git ]] && source ~/.bash_git
+
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
