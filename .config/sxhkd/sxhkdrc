@@ -12,7 +12,7 @@ alt + m
 
 # Description; Run kitty;
 super + Return
-	alacritty
+	alacritty -e tmux
 
 # Description; Restart sxhkd;
 super + Insert
