@@ -8,8 +8,6 @@ set -o vi
 
 [[ $- != *i* ]] && return
 
-[[ -f ~/.welcome_screen ]] && source ~/.welcome_screen
-
 [[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
 
 [[ -f ~/.bash_code.sh ]] && source ~/.bash_code.sh

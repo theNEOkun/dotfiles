@@ -8,7 +8,7 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-export TERMINAL=/usr/bin/kitty;
+export TERMINAL=/usr/bin/alacritty
 
 export EDITOR='nvim'
 export VISUAL='nvim'

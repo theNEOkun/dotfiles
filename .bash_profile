@@ -5,6 +5,8 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 . "$HOME/.cargo/env"
 
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+
 # if [ -n "$DESKTOP_SESSION" ];then
 #     eval $(gnome-keyring-daemon --start)
 #     export SSH_AUTH_SOCK
@@ -14,8 +16,6 @@ export TERMINAL=/usr/bin/alacritty;
 
 export EDITOR='nvim'
 export VISUAL='nvim'
-
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 
 export STACK_XDG="YES";
 export GHCUP_USE_XDG_DIRS="YES";
