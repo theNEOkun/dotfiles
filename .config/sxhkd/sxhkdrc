@@ -14,8 +14,8 @@ alt + m
 super + Return
 	alacritty -e tmux
 
-shift + super + Return
-	alacritty --title scratchpad
+# shift + super + Return
+# 	alacritty --title scratchpad
 
 # Description; Restart sxhkd;
 super + Insert
