@@ -21,3 +21,5 @@ alias hx='helix'
 
 alias gdbt='gdb --tui'
 alias rgdbt='rust-gdb --tui'
+
+alias notes="nvim ~/Documents/Notes"
