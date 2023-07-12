@@ -22,6 +22,7 @@ source /usr/share/fzf/completion.bash
 #Exports
 
 export JDTLS_HOME="/usr/share/java/jdtls"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk/bin/java"
 export ANT_HOME="/usr/lib/ant:$HOME/.local/share/ant:/usr/share/java/ant:/usr/share/ant"
 export ZK_NOTEBOOK_DIR="$HOME/Documents/ZK"
 export PARU_CONF="$HOME/.config/paru/paru.conf"

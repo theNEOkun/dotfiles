@@ -1,5 +1,5 @@
 import:
-  - ~/library/.alcritty-theme/themes/helix-theme.yml
+  - ~/library/.alcritty-theme/themes/campbell-theme.yml
   # Configuration for Alacritty, the GPU enhanced terminal emulator.
   # Import additional configuration files
   #
