@@ -12,7 +12,7 @@ alt + m
 
 # Description; Run kitty;
 super + Return
-	alacritty -e tmux
+	alacritty
 
 # shift + super + Return
 # 	alacritty --title scratchpad
@@ -20,3 +20,8 @@ super + Return
 # Description; Restart sxhkd;
 super + Insert
   pkill -USR1 -x sxhkd; notify-send "Done"
+
+Shift_L + Alt_L
+    setxkbmap -query | grep -q 'se' && setxkbmap us || setxkbmap se,us
+Shift_R + Alt_R
+    setxkbmap -query | grep -q 'se' && setxkbmap us || setxkbmap se,us
